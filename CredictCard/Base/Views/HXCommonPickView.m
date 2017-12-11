@@ -7,17 +7,11 @@
 //
 
 #import "HXCommonPickView.h"
-#import "HXTeachingTypeListAPI.h"
-#import "HXTeachingTypeListModel.h"
-#import "HXTalentvideotypeAPI.h"
-#import "HXTalentVideoTypeModel.h"
 
 @interface HXCommonPickView ()<UIPickerViewDelegate,UIPickerViewDataSource>
 
 @property(nonatomic,strong) NSMutableArray *titleArr;
 @property(nonatomic,strong) NSMutableArray *teachingTypeList;
-
-@property (nonatomic, strong)   HXTeachingTypeListModel *teachingTypeListModel;
 
 @end
 
@@ -70,9 +64,8 @@
     
     }else if(self.style == HXCommonPickViewStyleTeachingtype){
     
-        HXTeachingTypeVarListModel *model = self.teachingTypeListModel.varList[self.selectIndex];
-        
-        self.completeBlock2(model);
+        self.completeBlock(self.selectedItem);
+
         
     }else if(self.style == HXCommonPickViewStyleWithDrawWay){
     
@@ -88,9 +81,8 @@
         
     }else if(self.style == HXCommonPickViewStyleTalentvideotype){
         
-        HXTalentVideoTypeModel *api = [HXTalentVideoTypeModel new];
-        HXTalentVideoTypeModel *model = [api.class mj_objectWithKeyValues:self.teachingTypeList[self.selectIndex]];
-        self.completeBlock2(model);
+        self.completeBlock(self.selectedItem);
+
         
     }else if(self.style == HXCommonPickViewStylechapterCount){
         
@@ -130,8 +122,12 @@
        
             }else if(self.style == HXCommonPickViewStyleTeachingtype){
                 
-                //教学类型
-                [self getTeachingtypeData];
+                //教龄
+                [self.titleArr removeAllObjects];
+                NSArray *arr = @[@"1年以下",@"1~3年",@"3~6年",@"6~10年",@"10~20年",@"20年以上"];
+                [self.titleArr addObjectsFromArray:arr];
+                
+                [self addPickViewInContentView];
                 
             }else if(self.style == HXCommonPickViewStyleWithDrawWay){
                 
@@ -159,19 +155,16 @@
                 [self addPickViewInContentView];
             }else if(self.style == HXCommonPickViewStyleTalentvideotype){
             
-                //才艺类别
-                [self getTalentvideotype];
+                NSArray *arr = @[@"1年以下",@"1~3年",@"3~6年",@"6~10年",@"10~20年",@"20年以上"];
+                [self.titleArr addObjectsFromArray:arr];
+                
+                [self addPickViewInContentView];
                 
             }else if(self.style == HXCommonPickViewStylechapterCount){
                 
                 //章节数
-                [self.titleArr removeAllObjects];
-                
-                for (NSInteger i = 0;i<50; i++) {
-                    
-                    [self.titleArr addObject:[NSString stringWithFormat:@"%ld节",i+1]];
-   
-                }
+                NSArray *arr = @[@"1年以下",@"1~3年",@"3~6年",@"6~10年",@"10~20年",@"20年以上"];
+                [self.titleArr addObjectsFromArray:arr];
                 
                 [self addPickViewInContentView];
                 
@@ -193,53 +186,7 @@
 
 #pragma mark --网络请求
 
-- (void)getTeachingtypeData {
-    
-    [[[HXTeachingTypeListAPI getTeachingTypeList] netWorkClient] postRequestInView:nil finishedBlock:^(id responseObject, NSError *error) {
-        
-        HXTeachingTypeListModel *api = [HXTeachingTypeListModel new];
-        
-        self.teachingTypeListModel = [api.class mj_objectWithKeyValues:responseObject];
-        
-        [self.titleArr removeAllObjects];
-        
-        for (HXTeachingTypeVarListModel *model  in self.teachingTypeListModel.varList) {
-            [self.titleArr addObject:model.teachingtype_name];
-        }
-        
-        [self addPickViewInContentView];
-       
-        
-    }];
-    
-}
-- (void)getTalentvideotype{
 
-    
-    [self.titleArr removeAllObjects];
-
-    [[[HXTalentvideotypeAPI getTalentvideotypeList] netWorkClient] postRequestInView:nil finishedBlock:^(id responseObject, NSError *error) {
-       
-        NSArray *varlist = responseObject[@"varList"];
-        self.teachingTypeList = varlist;
-        
-        if (varlist.count>0) {
-            
-            for (NSDictionary *dic in varlist) {
-                
-                HXTalentVideoTypeModel *api = [HXTalentVideoTypeModel new];
-                HXTalentVideoTypeModel *model = [api.class mj_objectWithKeyValues:dic];
-                [self.titleArr addObject:model.talentvideotype_name];
-                
-            }
-            
-            [self addPickViewInContentView];
-
-        }
-      
-    }];
-  
-}
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
     
     return 37;

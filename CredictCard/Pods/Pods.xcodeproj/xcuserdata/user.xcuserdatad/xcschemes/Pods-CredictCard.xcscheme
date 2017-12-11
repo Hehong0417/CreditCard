@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C94F094C4B75C41E4645A1705B05E774"
+               BlueprintIdentifier = "23FF02B0CF4727810CF1D565CC3A2CE0"
                BuildableName = "Pods_CredictCard.framework"
                BlueprintName = "Pods-CredictCard"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C94F094C4B75C41E4645A1705B05E774"
+            BlueprintIdentifier = "23FF02B0CF4727810CF1D565CC3A2CE0"
             BuildableName = "Pods_CredictCard.framework"
             BlueprintName = "Pods-CredictCard"
             ReferencedContainer = "container:Pods.xcodeproj">

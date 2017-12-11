@@ -64,7 +64,6 @@
 		CE6B46211FDE838C00D715D7 /* GetFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B45781FDE838B00D715D7 /* GetFilePath.m */; };
 		CE6B46221FDE838C00D715D7 /* UILabel+FormattedText.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B45791FDE838B00D715D7 /* UILabel+FormattedText.m */; };
 		CE6B46231FDE838C00D715D7 /* HXTakePhotosHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B457B1FDE838B00D715D7 /* HXTakePhotosHandle.m */; };
-		CE6B46241FDE838C00D715D7 /* UIView+Effects.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B457D1FDE838B00D715D7 /* UIView+Effects.m */; };
 		CE6B46251FDE838C00D715D7 /* UIStoryboard+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B457E1FDE838B00D715D7 /* UIStoryboard+Addition.m */; };
 		CE6B46261FDE838C00D715D7 /* UIView+LayoutConstraintHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B45841FDE838B00D715D7 /* UIView+LayoutConstraintHelper.m */; };
 		CE6B46271FDE838C00D715D7 /* UIImageView+RoundImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B45851FDE838C00D715D7 /* UIImageView+RoundImageView.m */; };
@@ -106,6 +105,14 @@
 		CE6B464B1FDE838C00D715D7 /* GFAddressPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B45EC1FDE838C00D715D7 /* GFAddressPicker.m */; };
 		CE6B464C1FDE838C00D715D7 /* HXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B45EF1FDE838C00D715D7 /* HXTabBar.m */; };
 		CE6B464D1FDE838C00D715D7 /* HJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B45F11FDE838C00D715D7 /* HJTabBarController.m */; };
+		CE6B46711FDE8EB000D715D7 /* HXEditPwdAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B46651FDE8EB000D715D7 /* HXEditPwdAPI.m */; };
+		CE6B46721FDE8EB000D715D7 /* HXGetVerifyCodeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B46681FDE8EB000D715D7 /* HXGetVerifyCodeAPI.m */; };
+		CE6B46731FDE8EB000D715D7 /* HXForgetPwdAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B466C1FDE8EB000D715D7 /* HXForgetPwdAPI.m */; };
+		CE6B46741FDE8EB000D715D7 /* HXUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B466D1FDE8EB000D715D7 /* HXUserInfoModel.m */; };
+		CE6B46751FDE8EB000D715D7 /* HXUploadIconModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B466E1FDE8EB000D715D7 /* HXUploadIconModel.m */; };
+		CE6B46761FDE8EB000D715D7 /* HXuploadIconAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B46701FDE8EB000D715D7 /* HXuploadIconAPI.m */; };
+		CE6B46791FDE8EF900D715D7 /* HXRegisterAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B46781FDE8EF900D715D7 /* HXRegisterAPI.m */; };
+		CE6B467C1FDE8F0100D715D7 /* HXLoginAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6B467B1FDE8F0000D715D7 /* HXLoginAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,7 +239,6 @@
 		CE6B456E1FDE838B00D715D7 /* MBProgressHUD+LH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+LH.h"; sourceTree = "<group>"; };
 		CE6B45701FDE838B00D715D7 /* UIViewController+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Create.m"; sourceTree = "<group>"; };
 		CE6B45711FDE838B00D715D7 /* UIStoryboard+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Addition.h"; sourceTree = "<group>"; };
-		CE6B45721FDE838B00D715D7 /* UIView+Effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Effects.h"; sourceTree = "<group>"; };
 		CE6B45731FDE838B00D715D7 /* HXTakePhotosHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTakePhotosHandle.h; sourceTree = "<group>"; };
 		CE6B45741FDE838B00D715D7 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		CE6B45751FDE838B00D715D7 /* UIView+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Create.m"; sourceTree = "<group>"; };
@@ -243,7 +249,6 @@
 		CE6B457A1FDE838B00D715D7 /* UIImageView+RoundImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+RoundImageView.h"; sourceTree = "<group>"; };
 		CE6B457B1FDE838B00D715D7 /* HXTakePhotosHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTakePhotosHandle.m; sourceTree = "<group>"; };
 		CE6B457C1FDE838B00D715D7 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
-		CE6B457D1FDE838B00D715D7 /* UIView+Effects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Effects.m"; sourceTree = "<group>"; };
 		CE6B457E1FDE838B00D715D7 /* UIStoryboard+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Addition.m"; sourceTree = "<group>"; };
 		CE6B457F1FDE838B00D715D7 /* UIViewController+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Create.h"; sourceTree = "<group>"; };
 		CE6B45801FDE838B00D715D7 /* UIView+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Create.h"; sourceTree = "<group>"; };
@@ -333,6 +338,22 @@
 		CE6B45F11FDE838C00D715D7 /* HJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabBarController.m; sourceTree = "<group>"; };
 		CE6B45F21FDE838C00D715D7 /* HXTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTabBar.h; sourceTree = "<group>"; };
 		CE6B46511FDE859D00D715D7 /* CredictCard.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CredictCard.pch; sourceTree = "<group>"; };
+		CE6B46651FDE8EB000D715D7 /* HXEditPwdAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXEditPwdAPI.m; sourceTree = "<group>"; };
+		CE6B46661FDE8EB000D715D7 /* HXForgetPwdAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXForgetPwdAPI.h; sourceTree = "<group>"; };
+		CE6B46671FDE8EB000D715D7 /* HXuploadIconAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXuploadIconAPI.h; sourceTree = "<group>"; };
+		CE6B46681FDE8EB000D715D7 /* HXGetVerifyCodeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXGetVerifyCodeAPI.m; sourceTree = "<group>"; };
+		CE6B46691FDE8EB000D715D7 /* HXUploadIconModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXUploadIconModel.h; sourceTree = "<group>"; };
+		CE6B466A1FDE8EB000D715D7 /* HXUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXUserInfoModel.h; sourceTree = "<group>"; };
+		CE6B466B1FDE8EB000D715D7 /* HXEditPwdAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXEditPwdAPI.h; sourceTree = "<group>"; };
+		CE6B466C1FDE8EB000D715D7 /* HXForgetPwdAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXForgetPwdAPI.m; sourceTree = "<group>"; };
+		CE6B466D1FDE8EB000D715D7 /* HXUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXUserInfoModel.m; sourceTree = "<group>"; };
+		CE6B466E1FDE8EB000D715D7 /* HXUploadIconModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXUploadIconModel.m; sourceTree = "<group>"; };
+		CE6B466F1FDE8EB000D715D7 /* HXGetVerifyCodeAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXGetVerifyCodeAPI.h; sourceTree = "<group>"; };
+		CE6B46701FDE8EB000D715D7 /* HXuploadIconAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXuploadIconAPI.m; sourceTree = "<group>"; };
+		CE6B46771FDE8EF800D715D7 /* HXRegisterAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXRegisterAPI.h; sourceTree = "<group>"; };
+		CE6B46781FDE8EF900D715D7 /* HXRegisterAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXRegisterAPI.m; sourceTree = "<group>"; };
+		CE6B467A1FDE8F0000D715D7 /* HXLoginAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXLoginAPI.h; sourceTree = "<group>"; };
+		CE6B467B1FDE8F0000D715D7 /* HXLoginAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXLoginAPI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +418,7 @@
 		CE6B44551FDE6F7A00D715D7 /* CredictCard */ = {
 			isa = PBXGroup;
 			children = (
+				CE6B46641FDE8EB000D715D7 /* CommonModule */,
 				CE6B44561FDE6F7A00D715D7 /* AppDelegate.h */,
 				CE6B44571FDE6F7A00D715D7 /* AppDelegate.m */,
 				CE6B445C1FDE6F7A00D715D7 /* Main.storyboard */,
@@ -640,7 +662,6 @@
 			children = (
 				CE6B45701FDE838B00D715D7 /* UIViewController+Create.m */,
 				CE6B45711FDE838B00D715D7 /* UIStoryboard+Addition.h */,
-				CE6B45721FDE838B00D715D7 /* UIView+Effects.h */,
 				CE6B45731FDE838B00D715D7 /* HXTakePhotosHandle.h */,
 				CE6B45741FDE838B00D715D7 /* UIView+Utils.m */,
 				CE6B45751FDE838B00D715D7 /* UIView+Create.m */,
@@ -651,7 +672,6 @@
 				CE6B457A1FDE838B00D715D7 /* UIImageView+RoundImageView.h */,
 				CE6B457B1FDE838B00D715D7 /* HXTakePhotosHandle.m */,
 				CE6B457C1FDE838B00D715D7 /* UIView+Utils.h */,
-				CE6B457D1FDE838B00D715D7 /* UIView+Effects.m */,
 				CE6B457E1FDE838B00D715D7 /* UIStoryboard+Addition.m */,
 				CE6B457F1FDE838B00D715D7 /* UIViewController+Create.h */,
 				CE6B45801FDE838B00D715D7 /* UIView+Create.h */,
@@ -974,6 +994,29 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		CE6B46641FDE8EB000D715D7 /* CommonModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE6B46771FDE8EF800D715D7 /* HXRegisterAPI.h */,
+				CE6B46781FDE8EF900D715D7 /* HXRegisterAPI.m */,
+				CE6B467A1FDE8F0000D715D7 /* HXLoginAPI.h */,
+				CE6B467B1FDE8F0000D715D7 /* HXLoginAPI.m */,
+				CE6B466B1FDE8EB000D715D7 /* HXEditPwdAPI.h */,
+				CE6B46651FDE8EB000D715D7 /* HXEditPwdAPI.m */,
+				CE6B46671FDE8EB000D715D7 /* HXuploadIconAPI.h */,
+				CE6B46701FDE8EB000D715D7 /* HXuploadIconAPI.m */,
+				CE6B46661FDE8EB000D715D7 /* HXForgetPwdAPI.h */,
+				CE6B466C1FDE8EB000D715D7 /* HXForgetPwdAPI.m */,
+				CE6B466A1FDE8EB000D715D7 /* HXUserInfoModel.h */,
+				CE6B466D1FDE8EB000D715D7 /* HXUserInfoModel.m */,
+				CE6B46691FDE8EB000D715D7 /* HXUploadIconModel.h */,
+				CE6B466E1FDE8EB000D715D7 /* HXUploadIconModel.m */,
+				CE6B466F1FDE8EB000D715D7 /* HXGetVerifyCodeAPI.h */,
+				CE6B46681FDE8EB000D715D7 /* HXGetVerifyCodeAPI.m */,
+			);
+			path = CommonModule;
+			sourceTree = "<group>";
+		};
 		E8760E2D78477B77CAA14335 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1158,6 +1201,7 @@
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/WHC_AutoLayoutKit/WHC_AutoLayoutKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1175,6 +1219,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WHC_AutoLayoutKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1228,12 +1273,15 @@
 				CE6B46421FDE838C00D715D7 /* HJUser.m in Sources */,
 				CE6B46391FDE838C00D715D7 /* UserNoLoginManager.m in Sources */,
 				CE6B46281FDE838C00D715D7 /* LHVerifyCodeButton.m in Sources */,
+				CE6B46751FDE8EB000D715D7 /* HXUploadIconModel.m in Sources */,
 				CE6B462C1FDE838C00D715D7 /* UIBarButtonItem+WZLBadge.m in Sources */,
 				CE6B45FE1FDE838C00D715D7 /* UIImageView+LH.m in Sources */,
 				CE6B46011FDE838C00D715D7 /* UILabel+LH.m in Sources */,
 				CE6B46091FDE838C00D715D7 /* UIWebView+LH.m in Sources */,
 				CE6B463B1FDE838C00D715D7 /* HJLogFormatter.m in Sources */,
+				CE6B46761FDE8EB000D715D7 /* HXuploadIconAPI.m in Sources */,
 				CE6B46101FDE838C00D715D7 /* NSDictionary+NSRangeException.m in Sources */,
+				CE6B467C1FDE8F0100D715D7 /* HXLoginAPI.m in Sources */,
 				CE6B461D1FDE838C00D715D7 /* UIViewController+Create.m in Sources */,
 				CE6B461F1FDE838C00D715D7 /* UIView+Create.m in Sources */,
 				CE6B44581FDE6F7A00D715D7 /* AppDelegate.m in Sources */,
@@ -1247,9 +1295,9 @@
 				CE6B46271FDE838C00D715D7 /* UIImageView+RoundImageView.m in Sources */,
 				CE6B46261FDE838C00D715D7 /* UIView+LayoutConstraintHelper.m in Sources */,
 				CE6B460E1FDE838C00D715D7 /* NSNull+Exception.m in Sources */,
-				CE6B46241FDE838C00D715D7 /* UIView+Effects.m in Sources */,
 				CE6B464C1FDE838C00D715D7 /* HXTabBar.m in Sources */,
 				CE6B45F31FDE838C00D715D7 /* HJSettingItem.m in Sources */,
+				CE6B46711FDE8EB000D715D7 /* HXEditPwdAPI.m in Sources */,
 				CE6B46311FDE838C00D715D7 /* LHAlertView.m in Sources */,
 				CE6B45FF1FDE838C00D715D7 /* UIScrollView+LH.m in Sources */,
 				CE6B46171FDE838C00D715D7 /* NSString+LH.m in Sources */,
@@ -1275,6 +1323,7 @@
 				CE6B46221FDE838C00D715D7 /* UILabel+FormattedText.m in Sources */,
 				CE6B46161FDE838C00D715D7 /* NSMutableArray+LH.m in Sources */,
 				CE6B46491FDE838C00D715D7 /* HJHomePageHeaderView.m in Sources */,
+				CE6B46721FDE8EB000D715D7 /* HXGetVerifyCodeAPI.m in Sources */,
 				CE6B461A1FDE838C00D715D7 /* CAShapeLayer+LH.m in Sources */,
 				CE6B463A1FDE838C00D715D7 /* HJLog.m in Sources */,
 				CE6B46211FDE838C00D715D7 /* GetFilePath.m in Sources */,
@@ -1292,9 +1341,12 @@
 				CE6B46001FDE838C00D715D7 /* UIView+LH.m in Sources */,
 				CE6B46431FDE838C00D715D7 /* BaseModel.m in Sources */,
 				CE6B46401FDE838C00D715D7 /* UIViewController+AOP.m in Sources */,
+				CE6B46791FDE8EF900D715D7 /* HXRegisterAPI.m in Sources */,
 				CE6B45FC1FDE838C00D715D7 /* UIImage+LH.m in Sources */,
 				CE6B46231FDE838C00D715D7 /* HXTakePhotosHandle.m in Sources */,
 				CE6B46081FDE838C00D715D7 /* UIButton+LH.m in Sources */,
+				CE6B46741FDE8EB000D715D7 /* HXUserInfoModel.m in Sources */,
+				CE6B46731FDE8EB000D715D7 /* HXForgetPwdAPI.m in Sources */,
 				CE6B46441FDE838C00D715D7 /* BaseCache.m in Sources */,
 				CE6B460B1FDE838C00D715D7 /* UIColor+LH.m in Sources */,
 			);
@@ -1462,7 +1514,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F972623DL2;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/CredictCard/CredictCard/CredictCard.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CredictCard/CredictCard.pch";
 				INFOPLIST_FILE = CredictCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1482,7 +1534,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F972623DL2;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/CredictCard/CredictCard/CredictCard.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CredictCard/CredictCard.pch";
 				INFOPLIST_FILE = CredictCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

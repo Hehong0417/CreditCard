@@ -17,7 +17,6 @@
 #import <MJExtension/MJExtension.h>
 #import <Masonry/Masonry.h>
 #import "MJRefresh.h"
-#import "MWPhotoBrowser.h"
 #import <Aspects/Aspects.h>
 
 #import <MBProgressHUD/MBProgressHUD.h>
@@ -25,7 +24,6 @@
 #import "UIImageView+WebCache.h"
 #import "UIButton+WebCache.h"
 #import "SVProgressHUD.h"
-#import "EaseUI.h"
 #import <UShareUI/UShareUI.h>
 #import "UIImage+GIF.h"
 
@@ -41,8 +39,6 @@
 #import "AppConfig.h"
 #import "AppMacros.h"
 // xu
-#import <YYWebImage/YYWebImage.h>
-#import <YYImage/YYImage.h>
 #import <YYCategories/YYCategories.h>
 #import "XYQButton.h"
 #import "HJGroupItem.h"
@@ -53,13 +49,10 @@
 
 //第三方
 #import <AFNetworking/AFNetworking.h>
-#import <IQKeyboardManager/IQKeyboardManager.h>
-#import <IQKeyboardManager/IQTextView.h>
 #import "UIStoryboard+Addition.h"
 #import <BlocksKit/BlocksKit.h>
 #import <BlocksKit/BlocksKit+UIKit.h>
 #import "JPUSHService.h"
-#import "UMMobClick/MobClick.h"
 #import <YYCategories/YYCategories.h>
 
 

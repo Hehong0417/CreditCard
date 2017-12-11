@@ -8,7 +8,6 @@
 
 #import "HWNEWfeatureViewController.h"
 #import "HJTabBarController.h"
-#import "HXChooseIdentifyVC.h"
 
 #define HWNEWfeatureCount 3
 
@@ -48,9 +47,6 @@
     imageView.userInteractionEnabled = YES;
     [imageView setTapActionWithBlock:^{
       
-        HXChooseIdentifyVC *vc = [[HXChooseIdentifyVC alloc]init];
-        HJNavigationController *nav = [[HJNavigationController alloc]initWithRootViewController:vc];
-        [UIApplication sharedApplication].keyWindow.rootViewController = nav;
 
         
     }];

@@ -14,6 +14,7 @@ pod 'YYCategories', '~>0.9.0'
 pod 'SDCycleScrollView’
 pod 'JSONModel', '~> 1.1.2'
 pod 'WHC_AutoLayoutKit'
+pod 'YYCache'
 
 # U-Share SDK UI模块（分享面板，建议添加）
 pod 'UMengUShare/UI'
@@ -23,5 +24,8 @@ pod 'UMengUShare/Social/WeChat'
 pod 'UMengUShare/Social/Sina'
 # 集成QQ
 pod 'UMengUShare/Social/QQ'
+
+pod 'JPush', '3.0.2'
+
 
 end

@@ -7,8 +7,6 @@
 //
 
 #import "UserNoLoginManager.h"
-#import "HXUserLoginVC.h"
-
 
 @implementation UserNoLoginManager
 
@@ -38,16 +36,7 @@
     
     UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"去登录" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
-        HXUserLoginVC *vc =  [HXUserLoginVC new];
-        vc.loginBlock = ^{
-            
-            if ([self.delegate respondsToSelector:@selector(loginCompeleteRefresh)]) {
-                
-                [self.delegate loginCompeleteRefresh];
-            }
-            
-        };
-        [self.nav pushVC:vc];
+      
         
     }];
     UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {

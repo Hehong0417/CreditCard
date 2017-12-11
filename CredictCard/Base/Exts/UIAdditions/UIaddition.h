@@ -17,7 +17,6 @@
 #import "UILabel+FormattedText.h"
 #import "UIStoryboard+Addition.h"
 #import "UIView+Create.h"
-#import "UIView+Effects.h"
 #import "UIView+LayoutConstraintHelper.h"
 #import "UIView+Utils.h"
 #import "UIViewController+Create.h"

@@ -155,7 +155,6 @@
 
 
 #import "HJUser.h"
-#import "HXTeacherLoginModel.h"
 //#define article_detail_url  @"http://192.168.0.105/my/menya/Mengya/index.html"
 //文章详情
 #define article_detail_url  @"http://www.duoyimeng.com/html/goaling/mengya/index.html"
