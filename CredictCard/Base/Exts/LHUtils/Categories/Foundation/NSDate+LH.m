@@ -67,7 +67,7 @@
  */
 - (NSString *)lh_string_yyyy_MM_dd{
 
-    NSString *dateFormat = @"yyyy'年'MM'月'dd'日'";
+    NSString *dateFormat = @"yyyy'-'MM'-'dd";
     
     return [self lh_private_stringWithFormat:dateFormat];
 
@@ -79,7 +79,7 @@
  */
 - (NSString *)lh_string_yyyy_MM{
     
-    NSString *dateFormat = @"yyyy'年'MM'月'";
+    NSString *dateFormat = @"yyyy'-'MM";
     
     return [self lh_private_stringWithFormat:dateFormat];
     

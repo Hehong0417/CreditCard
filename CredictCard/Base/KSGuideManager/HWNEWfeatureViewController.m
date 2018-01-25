@@ -8,6 +8,8 @@
 
 #import "HWNEWfeatureViewController.h"
 #import "HJTabBarController.h"
+#import "HHWXLoginVC.h"
+
 
 #define HWNEWfeatureCount 3
 
@@ -47,7 +49,8 @@
     imageView.userInteractionEnabled = YES;
     [imageView setTapActionWithBlock:^{
       
-
+        HHWXLoginVC *vc = [[HHWXLoginVC alloc] initWithNibName:@"HHWXLoginVC" bundle:nil];
+        kKeyWindow.rootViewController = [[HJNavigationController alloc] initWithRootViewController:vc];
         
     }];
 

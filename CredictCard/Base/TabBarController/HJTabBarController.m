@@ -140,7 +140,7 @@
 {
     //设置底部tabbar的主题样式
     UITabBarItem *appearance = [UITabBarItem appearance];
-    [appearance setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:APP_COMMON_COLOR, NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
+    [appearance setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kComm_Color, NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
     //    UITabBar *appearance1 = [UITabBar appearance];
     //    UIImage *navImage = [UIImage imageWithColor:RGB(46, 40, 42)];
     //    [appearance1 setBackgroundImage:navImage];
@@ -155,9 +155,7 @@
     if (!_tabBarItemTitles) {
         
         _tabBarItemTitles = @[ @"首页",
-                               @"课程",
-                               @"萌艺圈",
-                               @"活动",
+                               @"发现",
                                @"我的"];
     }
     
@@ -168,11 +166,9 @@
     
     if (!_tabBarItemNormalImages) {
         
-        _tabBarItemNormalImages = @[@"t3",
-                                    @"oneToOne",
-                                    @"tab_2gray",
-                                    @"noActivity",
-                                     @"t2",
+        _tabBarItemNormalImages = @[@"tab_icon_home_default",
+                                    @"tab_icon_find_default",
+                                     @"tab_icon_user_default",
                                      ];
     }
     
@@ -183,11 +179,9 @@
     
     if (!_tabBarItemSelectedImages) {
         
-        _tabBarItemSelectedImages =  @[@"t3_pre",
-                                       @"oneToOne_pre",
-                                       @"tab_2",
-                                       @"activity",
-                                       @"t2_pre",
+        _tabBarItemSelectedImages =  @[@"tab_icon_home_selected",
+                                       @"tab_icon_find_selected",
+                                       @"tab_icon_user_selected",
                                        ];    }
     
     return _tabBarItemSelectedImages;
@@ -198,17 +192,13 @@
     if (!_tabBarStoryBoardItems) {
         
         //
-        HJStoryBoardItem *item1 = [HJStoryBoardItem itemWithStroyBoardName:@"Home" identifier:@"HXHomeVC" viewControllerNonExist:YES];
-        HJStoryBoardItem *item2 = [HJStoryBoardItem itemWithStroyBoardName:@"Home" identifier:@"HXHomeCourseVC" viewControllerNonExist:YES];
-        HJStoryBoardItem *item3 = [HJStoryBoardItem itemWithStroyBoardName:@"Activity" identifier:@"HXActivityVC" viewControllerNonExist:YES];
-        HJStoryBoardItem *item4 = [HJStoryBoardItem itemWithStroyBoardName:@"Mine" identifier:@"HXMineVC" viewControllerNonExist:YES];
-         HJStoryBoardItem *item5 = [HJStoryBoardItem itemWithStroyBoardName:@"Talent" identifier:@"HXTalentVC" viewControllerNonExist:YES];
+        HJStoryBoardItem *item1 = [HJStoryBoardItem itemWithStroyBoardName:@"Home" identifier:@"HHHomeVC" viewControllerNonExist:YES];
+        HJStoryBoardItem *item2 = [HJStoryBoardItem itemWithStroyBoardName:@"Found" identifier:@"HHFoundVC" viewControllerNonExist:YES];
+        HJStoryBoardItem *item3 = [HJStoryBoardItem itemWithStroyBoardName:@"Mine" identifier:@"HHPersenCenterVC" viewControllerNonExist:YES];
         
         _tabBarStoryBoardItems = @[ item1,
                                     item2,
-                                    item5,
                                     item3,
-                                    item4
                                     ];
     }
     

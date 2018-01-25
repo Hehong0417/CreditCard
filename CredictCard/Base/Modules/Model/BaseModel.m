@@ -50,7 +50,7 @@ MJCodingImplementation
     if (filePath) {
         BOOL isSuccess = [NSKeyedArchiver archiveRootObject:self toFile:filePath];
         if (isSuccess) {
-//            DDLogInfo(@"归档 %@ 成功", self.class);
+            NSLog(@"归档 %@ 成功", self.class);
         }
     }
 }

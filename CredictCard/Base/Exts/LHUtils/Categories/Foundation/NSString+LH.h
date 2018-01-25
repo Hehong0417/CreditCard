@@ -42,6 +42,13 @@
 + (NSAttributedString *)attributedStringWithHTMLString:(NSString *)htmlString;
 
 + (NSAttributedString *)helpAttributedStringWithHTMLString:(NSString *)htmlString;
+
+
+
+/**
+ 添加下划线
+ */
+- (NSMutableAttributedString *)lh_addUnderlineAtContent:(NSString *)content rangeStr:(NSString *)rangeStr color:(UIColor *)color;
 @end
 
 

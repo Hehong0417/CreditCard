@@ -147,7 +147,5 @@
 
     _titleName = titleName;
     
-    
-    
 }
 @end

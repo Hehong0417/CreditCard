@@ -12,15 +12,18 @@
 #define FontSmallSize [UIFont systemFontOfSize:12]
 //公用颜色
 #define JDCommonColor [UIColor colorWithRed:0.478 green:0.478 blue:0.478 alpha:1]
-#define APP_COMMON_COLOR RGB(5, 193, 185)
+#define APP_COMMON_COLOR RGB(255, 255, 255)
+#define kComm_Color RGB(102, 145, 236)
+
 
 #define APP_green_COLOR RGB(190, 225, 255)
 
-#define KVCBackGroundColor RGB(238, 238, 238)
+#define KVCBackGroundColor RGB(245, 245, 245)
 #define KTitleLabelColor [UIColor colorWithHexString:@"#232323"]
 #define K7ELabelColor [UIColor colorWithHexString:@"#7E7E7E"]
 #define KFCLabelColor [UIColor colorWithHexString:@"#FC5F00"]
 #define KA0LabelColor [UIColor colorWithHexString:@"#A0A0A0"]
+#define KACLabelColor [UIColor colorWithHexString:@"#ACACAC"]
 #define KLightTitleColor [UIColor colorWithHexString:@"#5f5f5f"]
 #define TitleGrayColor [UIColor colorWithHexString:@"#333333"]
 #define KDCLabelColor  [UIColor colorWithHexString:@"#DCDCDE"]
@@ -147,6 +150,13 @@ static const CGFloat kNormalButtonMargin = 30;
 
 //支付成功
 #define kNotificationPaySuccess @"kNotificationPaySuccess"
+
+//修改信息成功
+#define kNotificationModifySuccess @"kNotificationModifySuccess"
+
+//修改名字
+#define kNotificationUploadSuccess @"kNotificationUploadSuccess"
+
 
 //直接购买
 #define kNotificationPurchaseDirect @"kNotificationPurchaseDirect"

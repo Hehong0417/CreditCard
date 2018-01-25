@@ -176,7 +176,6 @@ static const CGFloat kNormalCellHeight = 44;
         }
         NSLog(@"*******%.2f",height);
         [headImageView setBackgroundColor:[UIColor lightGrayColor]];
-//        [headImageView setRoundImageViewWithBorderWidth:0];
         self.cellHeadImageView = headImageView;
         [cell.contentView addSubview:headImageView];
         
@@ -290,39 +289,47 @@ static const CGFloat kNormalCellHeight = 44;
             
             NSData *imgData = UIImageJPEGRepresentation(image, 0.5);
 //   上传头像
+        
             MBProgressHUD  *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
             hud.color = KA0LabelColor;
-            hud.detailsLabelText = @"头像正在上传中...";
-            hud.detailsLabelColor = kWhiteColor;
-            hud.detailsLabelFont = FONT(14);
+            hud.detailsLabel.text = @"头像正在上传中...";
+            hud.detailsLabel.textColor = kWhiteColor;
+            hud.detailsLabel.font = FONT(14);
             hud.activityIndicatorColor = kWhiteColor;
-            [hud show:YES];
+            [hud showAnimated:YES];
 
-            [[[HXuploadIconAPI uploadImageWithphotoFile:imgData type:@"logins"] netWorkClient] uploadFileInView:nil finishedBlock:^(id responseObject, NSError *error) {
+            NSString *base64Str = [imgData base64EncodedString];
+            
+            [[[HXuploadIconAPI uploadImageWithphotoFile:base64Str type:nil] netWorkClient] postRequestInView:nil finishedBlock:^(HXuploadIconAPI *api, NSError * error) {
+                                if (!error) {
+                                    if (api.code == 0) {
+
+                                        [[[HHPerCenterDataAPI postEditUserHeadWithImage:api.data] netWorkClient] postRequestInView:nil finishedBlock:^(HXuploadIconAPI *api, NSError *error) {
+                                          
+                                            if (!error) {
+                                                if (api.code == 0) {
+                                                    [hud hideAnimated:YES afterDelay:0.5];
+                                                    self.cellHeadImageView.image = image;
+                                                    
+                                              //头像上传成功通知
+                                            [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationModifySuccess object:nil];
+                                                }
+                                            }
+                                        
+                                        }];
+                   
+                                    }
+                                }else{
+                                    [hud hideAnimated:YES afterDelay:0.5];
+                                    [SVProgressHUD setMinimumDismissTimeInterval:1.0];
+                                    [SVProgressHUD showInfoWithStatus:@"头像上传失败，请重新上传~"];
                 
-                if (!error) {
-                  
-                    NSString *path =  responseObject[@"model"][@"fileName"];
-                    HXUploadIconModel *model = [HXUploadIconModel shareduserIconModel];
-                    model.fileName = path;
-                    model.cellImage = image;
-                    [model write];
-                    
-                    [hud hide:YES afterDelay:0.5];
-                    self.cellHeadImageView.image = image;
-                    
-                }else{
-                    
-                    [hud hide:YES afterDelay:0.5];
-                    [SVProgressHUD setMinimumDismissTimeInterval:1.0];
-                    [SVProgressHUD showInfoWithStatus:@"头像上传失败，请重新上传~"];
-                    
-                }
-
+                                }
+                
                 
                 
             }];
-//
+
             }];
     }
 }
@@ -484,7 +491,7 @@ static const CGFloat kNormalCellHeight = 44;
 }
 - (FontAttributes *)detailLabelFontAttributes {
     
-    return [FontAttributes fontAttributesWithFontColor:KLightTitleColor fontsize:WidthScaleSize_H(14)];
+    return [FontAttributes fontAttributesWithFontColor:KACLabelColor fontsize:WidthScaleSize_H(14)];
 }
 
 - (CGFloat)firstGroupSpacing {

@@ -9,5 +9,5 @@
 #import "BaseAPI.h"
 
 @interface HXuploadIconAPI : BaseAPI
-+ (instancetype)uploadImageWithphotoFile:(NSData *)photoFile type:(NSString *)type;
++ (instancetype)uploadImageWithphotoFile:(NSString *)photoFile type:(NSString *)type;
 @end

@@ -23,8 +23,8 @@
 @implementation LHVerifyCodeButton
 
 - (void)defaulInit {
-    self.titleLabel.adjustsFontSizeToFitWidth = YES;
-    self.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5);
+//    self.titleLabel.adjustsFontSizeToFitWidth = YES;
+//    self.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 5);
     self.timeInterval = 0;
 }
 

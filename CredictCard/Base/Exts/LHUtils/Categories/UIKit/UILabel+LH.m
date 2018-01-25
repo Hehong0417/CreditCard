@@ -92,16 +92,5 @@
         self.text =[NSString stringWithFormat:@" \n%@",self.text];
 }
 
-/**
- 添加下划线
- */
-- (NSMutableAttributedString *)lh_addUnderlineAtContent:(NSString *)content rangeStr:(NSString *)rangeStr{
 
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithString:content];
-    NSRange contentRange = [content rangeOfString:rangeStr];
-    
-    [attributedString addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:contentRange];
-
-    return attributedString;
-}
 @end

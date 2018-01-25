@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFHTTPSessionManager.h"
 
 @class BaseAPI;
 
@@ -66,8 +67,8 @@ typedef void(^APIFinishedBlock)(id responseObject, NSError *error);
  *
  *  AFHTTPRequestOperationManager对象，负责管理和调度网络请求
  */
-@property (nonatomic, strong) AFHTTPSessionManager *manager;
 
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
 /**
  *  @author hejing
  *
@@ -108,7 +109,7 @@ typedef void(^APIFinishedBlock)(id responseObject, NSError *error);
 + (instancetype)networkClientWithSubUrl:(NSString *)subUrl parameters:(NSDictionary *)parameters files:(NSArray *)files baseAPI:(BaseAPI *)baseAPI;
 
 
-- (void)getRequestInView:(UIView *)containerView finishedBlock:(APIFinishedBlock)finishedBlock;
+- (NSURLSessionDataTask *)getRequestInView:(UIView *)containerView finishedBlock:(APIFinishedBlock)finishedBlock;
 
 - (NSURLSessionDataTask *)postRequestInView:(UIView *)containerView finishedBlock:(APIFinishedBlock)finishedBlock;
 

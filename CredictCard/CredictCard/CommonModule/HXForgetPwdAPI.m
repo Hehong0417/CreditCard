@@ -13,7 +13,7 @@
 + (instancetype)FindPwdWithAcc:(NSString *)acc NewPwd:(NSString *)password{
     
     HXForgetPwdAPI *api = [HXForgetPwdAPI new];
-    api.subUrl = API_GET_FORGET_PWD;
+//    api.subUrl = API_GET_FORGET_PWD;
     if (acc) {
         [api.parameters setObject:acc forKey:@"acc"];
     }

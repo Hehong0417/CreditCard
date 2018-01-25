@@ -73,7 +73,18 @@
     
 }
 
-
+/**
+ 添加下划线
+ */
+- (NSMutableAttributedString *)lh_addUnderlineAtContent:(NSString *)content rangeStr:(NSString *)rangeStr color:(UIColor *)color{
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithString:content];
+    NSRange contentRange = [content rangeOfString:rangeStr];
+    
+    [attributedString addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:contentRange];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:color range:contentRange];
+    return attributedString;
+}
 
 @end
 

@@ -14,9 +14,10 @@
     
     if (self =[super initWithFrame:frame]) {
         //分类图片
-        self.categoryImageV = [[UIImageView alloc]initWithFrame:CGRectMake(10, 0, 10, 35)];
+        self.categoryImageV = [[UIImageView alloc]initWithFrame:CGRectMake(20, 0, 4, 15)];
         self.categoryImageV.contentMode = UIViewContentModeLeft;
-        //categoryImageV.backgroundColor = kOrangeColor;
+        self.categoryImageV.backgroundColor = kComm_Color;
+        self.categoryImageV.centerY = self.centerY;
         [self addSubview:self.categoryImageV];
         //标题
         self.headTitleLab = [[UILabel alloc]init];
@@ -43,7 +44,7 @@
 - (void)setHeadtitle:(NSString *)headtitle {
     _headtitle = headtitle;
     CGSize nameSize = [self.headtitle lh_sizeWithFont:[UIFont systemFontOfSize:self.labFont] constrainedToSize:CGSizeMake(SCREEN_WIDTH, 25)];
-    self.headTitleLab.frame = CGRectMake(30, 0, nameSize.width+5, 35);
+    self.headTitleLab.frame = CGRectMake(CGRectGetMaxX(self.categoryImageV.frame)+8, 0, nameSize.width+5, 35);
     self.headTitleLab.text = _headtitle;
 }
 - (void)setDiscribText:(NSString *)discribText {
@@ -61,10 +62,15 @@
     _rightImageName = rightImageName;
     
 }
+- (void)setRightBtn_W:(CGFloat)rightBtn_W{
+    
+    _rightBtn_W = rightBtn_W;
+
+}
 
 - (void)layoutSubviews {
     
-    XYQButton *changeBtn = [XYQButton ButtonWithFrame:CGRectMake(SCREEN_WIDTH - 60, 2, 60, self.frame.size.height-2) imgaeName:self.rightImageName titleName:self.rightBtnTitle contentType:self.contentType buttonFontAttributes:self.btnFontAttributes tapAction:^(XYQButton *button) {
+    XYQButton *changeBtn = [XYQButton ButtonWithFrame:CGRectMake(SCREEN_WIDTH - self.rightBtn_W, 2, self.rightBtn_W, self.frame.size.height-2) imgaeName:self.rightImageName titleName:self.rightBtnTitle contentType:self.contentType buttonFontAttributes:self.btnFontAttributes tapAction:^(XYQButton *button) {
         
         
     }];

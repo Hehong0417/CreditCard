@@ -13,7 +13,7 @@
 + (instancetype)editPwdWithOldpassword:(NSString *)oldpassword NewPwd:(NSString *)password Teacher_id:(NSString *)teacher_id Logins_id:(NSString *)logins_id{
     
     HXEditPwdAPI *api = [HXEditPwdAPI new];
-    api.subUrl = API_GET_EDIT_PWD;
+//    api.subUrl = API_GET_EDIT_PWD;
     if (oldpassword) {
         [api.parameters setObject:oldpassword forKey:@"oldpassword"];
     }

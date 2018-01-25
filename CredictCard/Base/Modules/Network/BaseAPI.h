@@ -19,6 +19,8 @@
 
 @property (nonatomic, strong) NSString *msg;
 
+@property (nonatomic, strong)  id data;
+
 @property (nonatomic, strong) NSMutableDictionary *parameters;
 
 @property (nonatomic, strong) NSArray *uploadFile;

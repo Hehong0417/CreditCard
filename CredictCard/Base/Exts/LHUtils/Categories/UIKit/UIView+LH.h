@@ -140,6 +140,19 @@
 
 @end
 
+#pragma mark -  阴影
+
+@interface UIView (Shadow)
+
+/**
+ *  阴影
+ */
+- (void)addShadowToView:(UIView *)view
+            withOpacity:(float)shadowOpacity
+           shadowRadius:(CGFloat)shadowRadius
+        andCornerRadius:(CGFloat)cornerRadius shadowColor:(UIColor *)shadowColor;
+
+@end
 
 #pragma mark - 视图坐标扩展
 

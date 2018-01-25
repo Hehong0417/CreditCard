@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HHLoadCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="09Q-Ek-dHe">
+                        <rect key="frame" x="16" y="17" width="44" height="44"/>
+                        <color key="backgroundColor" red="0.67450980390000004" green="0.67450980390000004" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="5Mm-At-vfV"/>
+                            <constraint firstAttribute="height" constant="44" id="EPf-ut-Zy2"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天天贷" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnp-A2-emq">
+                        <rect key="frame" x="72" y="17" width="187" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="Fgq-wD-Gux"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="有信用卡就能贷" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlX-1F-SY4">
+                        <rect key="frame" x="72" y="41" width="187" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="SM3-Lk-s4f"/>
+                            <constraint firstAttribute="width" constant="187" id="UGY-Mu-732"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.67450980392156867" green="0.67450980392156867" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCL-d7-Mmm">
+                        <rect key="frame" x="284" y="24" width="75" height="30"/>
+                        <color key="backgroundColor" red="0.0" green="0.31372549020000001" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="aWW-TQ-7CU"/>
+                            <constraint firstAttribute="width" constant="75" id="lkx-a9-ZQm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="立即贷款">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rlX-1F-SY4" firstAttribute="leading" secondItem="bnp-A2-emq" secondAttribute="leading" id="3Bs-IE-oo0"/>
+                    <constraint firstItem="vCL-d7-Mmm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4fj-Zi-8Of"/>
+                    <constraint firstItem="rlX-1F-SY4" firstAttribute="top" secondItem="bnp-A2-emq" secondAttribute="bottom" constant="2" id="5A2-fv-kgW"/>
+                    <constraint firstItem="bnp-A2-emq" firstAttribute="leading" secondItem="09Q-Ek-dHe" secondAttribute="trailing" constant="12" id="7nL-8g-ylD"/>
+                    <constraint firstItem="vCL-d7-Mmm" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Gpa-cA-hx9"/>
+                    <constraint firstItem="09Q-Ek-dHe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="sbY-Wd-usm"/>
+                    <constraint firstItem="vCL-d7-Mmm" firstAttribute="leading" secondItem="bnp-A2-emq" secondAttribute="trailing" constant="25" id="tfA-th-4sE"/>
+                    <constraint firstItem="bnp-A2-emq" firstAttribute="top" secondItem="09Q-Ek-dHe" secondAttribute="top" id="uBm-VG-tDC"/>
+                    <constraint firstItem="09Q-Ek-dHe" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uvO-TQ-P5w"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="iconImage" destination="09Q-Ek-dHe" id="tNT-gd-ecO"/>
+                <outlet property="loadBtn" destination="vCL-d7-Mmm" id="R0W-cH-IzA"/>
+                <outlet property="subTitle1" destination="rlX-1F-SY4" id="s1W-03-5oY"/>
+                <outlet property="titleLabel" destination="bnp-A2-emq" id="634-bA-yrE"/>
+            </connections>
+            <point key="canvasLocation" x="27.5" y="51"/>
+        </tableViewCell>
+    </objects>
+</document>

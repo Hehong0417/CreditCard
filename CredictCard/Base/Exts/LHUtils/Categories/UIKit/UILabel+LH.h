@@ -53,15 +53,5 @@
  */
 - (void)lh_alignBottom;
 
-#pragma mark - 下划线
-
-/**
-   添加下划线
-
- @param content 内容
- @param rangeStr 需要添加下划线的内容
- */
-- (NSMutableAttributedString *)lh_addUnderlineAtContent:(NSString *)content rangeStr:(NSString *)rangeStr;
-
 
 @end

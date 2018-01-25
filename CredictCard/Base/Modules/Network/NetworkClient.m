@@ -14,7 +14,7 @@
 #import "MD5Encryption.h"
 
 
-#define kTimeoutInterval 15.0
+#define kTimeoutInterval 60.0
 
 @interface NetworkClient ()
 
@@ -28,6 +28,11 @@
 @property (strong, nonatomic) UIView *containerView;
 
 @property (nonatomic, strong) NSArray *files;
+
+
+
+@property (nonatomic, copy) NSString *etag;
+
 
 @end
 
@@ -79,13 +84,20 @@
         // 设置超时时间
         _manager.requestSerializer.timeoutInterval = kTimeoutInterval;
 
-        [_manager.requestSerializer setValue:APP_key forHTTPHeaderField:@"APP_key"];
-        [_manager.requestSerializer setValue:[[APP_key stringByAppendingString:API_APP_BASE_URL] md5String]forHTTPHeaderField:@"APP_scode"];
+        NSString *Authorization = [HJUser sharedUser].token;
+        NSLog(@"Authorization:%@",Authorization);
+        [_manager.requestSerializer setValue:Authorization  forHTTPHeaderField:@"Authorization"];
+        //        NSURLRequestReturnCacheDataDontLoad  只使用cache数据，如果不存在cache，请求失败
+        //        NSURLRequestReloadIgnoringLocalAndRemoteCacheData 验证本地数据与远程数据是否相同，如果不同则下载远程数据，否则使用本地数据
+        //        NSURLRequestReturnCacheDataElseLoad  只有在cache中不存在data时才从原始地址下载。
+//        // 发送 etag
+//        if (self.etag.length > 0) {
+//            [_manager.requestSerializer setValue:self.etag forHTTPHeaderField:@"If-None-Match"];
+//        }
     }
     
     return _manager;
 }
-
 
 #pragma mark - Log
 
@@ -111,7 +123,7 @@
     NSString *paramStr = [NSString stringWithFormat:@"\n%@", self.parameters];
     
     if (!error) {
-        NSLog(@"------------接口地址：------------\n%@\n请求参数：%@\n拼接url：%@\n------------请求成功：------------\n%@\n  msg=%@",self.subUrl, paramStr,[self urlStringAppendingParameters] , response ,[response objectForKey:@"msg"]);
+        NSLog(@"------------接口地址：------------\n%@\n请求参数：%@\n拼接url：%@\n------------请求成功：------------\n %@\n",self.subUrl, paramStr,[self urlStringAppendingParameters],response);
     }
     else {
         NSLog(@"------------接口地址：------------\n%@\n请求参数：%@\n拼接url：%@\n------------请求失败：------------\n%@",self.subUrl, paramStr,[self urlStringAppendingParameters] ,error);
@@ -246,11 +258,11 @@
 - (void)readyForRequest:(UIView *)containerView {
     
     // 添加 UserId 和 Token
-    if (self.baseAPI.parametersAddToken) {
-        
-        [self addUserIdAndToken];
-    }
-//    
+//    if (self.baseAPI.parametersAddToken) {
+//
+//        [self addUserIdAndToken];
+//    }
+//
 //    //添加sign字段
 //    NSString *paramesStr = [self urlStringAppendingSign];
 //    //NSLog(@"paramesStr=%@",paramesStr);
@@ -360,7 +372,7 @@
         reqFinishedBlock(responseObject, nil);
         
         finishedBlock(responseObject, nil);
-//        finishedBlock(bAPIModel, nil);
+
     }
 }
 
@@ -398,52 +410,30 @@
 }
 
 - (void)requestFailure:(NSError *)error finishedBlock:(APIFinishedBlock)finishedBlock {
-    
-    NSInteger index = 0;
-    if ([error.localizedDescription isEqualToString:@"请求超时"]&&index==3) {
-        index ++;
-
-        // 开始请求
-        [self.manager POST:self.subUrl parameters:self.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
-            
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            
-            [self requestSucces:responseObject finishedBlock:finishedBlock];
-            
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            
-            [self requestFailure:error finishedBlock:finishedBlock];
-            
-        }];
-    }else{
         
-        [self dealWhileFailure:error];
+    [self dealWhileFailure:error];
 
-    }
-    
     if (finishedBlock) {
         finishedBlock(nil, error);
     }
-//    !finishedBlock ?: finishedBlock(nil, error);
 }
 
 
 #pragma mark - Get Request
 
-- (void)getRequestInView:(UIView *)containerView finishedBlock:(APIFinishedBlock)finishedBlock {
+- (NSURLSessionDataTask *)getRequestInView:(UIView *)containerView finishedBlock:(APIFinishedBlock)finishedBlock {
     
     [self readyForRequest:containerView];
-   
-
+       
     // 开始请求
-    [self.manager GET:self.subUrl parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+   return   [self.manager GET:self.subUrl parameters:self.parameters progress:^(NSProgress * _Nonnull downloadProgress) {
 
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         BaseAPI *bAPIModel = [self.baseAPI.class mj_objectWithKeyValues:responseObject];
-        
+
         [self requestSucces:bAPIModel finishedBlock:finishedBlock];
-        
+            
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         [self requestFailure:error finishedBlock:finishedBlock];
@@ -517,10 +507,11 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        [self requestSucces:responseObject finishedBlock:finishedBlock];
+        BaseAPI *bAPIModel = [self.baseAPI.class mj_objectWithKeyValues:responseObject];
+        
+        [self requestSucces:bAPIModel finishedBlock:finishedBlock];
 
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
         
         [self requestFailure:error finishedBlock:finishedBlock];
 

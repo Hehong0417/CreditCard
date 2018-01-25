@@ -21,7 +21,7 @@
     
     XYQButton *backButton = [XYQButton buttonWithType:UIButtonTypeCustom];
     [backButton setFrame:CGRectMake(0, 0, 30, 44)];
-    UIImage *image = [UIImage imageNamed:@"back"];
+    UIImage *image = [UIImage imageNamed:@"icon_back_default"];
     [backButton setImage:image forState:UIControlStateNormal];
     CGFloat imageWidth = image.size.width;
     CGFloat imageHeight = image.size.height;
@@ -38,16 +38,10 @@
         __weak UIViewController *weakController = controller;
 
         //导航栏返回按钮设置
-        if ([NSStringFromClass([controller class]) hasPrefix:@"HX"] &&
-            ![controller isKindOfClass:NSClassFromString(@"HXHomeCVC")] &&
-            ![controller isKindOfClass:NSClassFromString(@"HXTeacherPersonCenterVC")] &&
-            ![controller isKindOfClass:NSClassFromString(@"HXPersonCenterVC")] &&
+        if ([NSStringFromClass([controller class]) hasPrefix:@"HH"] &&
+            ![controller isKindOfClass:NSClassFromString(@"HHPersonCenterVC")] &&
             ![controller isKindOfClass:NSClassFromString(@"HJNavigationController")] &&
-            ![controller isKindOfClass:NSClassFromString(@"HXHomeVC")] &&
-            ![controller isKindOfClass:NSClassFromString(@"HJTabBarController")] &&
-            ![controller isKindOfClass:NSClassFromString(@"HXMineVC")]&&
-            ![controller isKindOfClass:NSClassFromString(@"HXChooseIdentifyVC")]&&![controller isKindOfClass:NSClassFromString(@"HXTalentVC")]&&
-            ![controller isKindOfClass:NSClassFromString(@"HXActivityVC")]&&![controller isKindOfClass:NSClassFromString(@"HXHomeCourseVC")]) {
+            ![controller isKindOfClass:NSClassFromString(@"HJTabBarController")]) {
          
             //Log 视图加载
 //            DDLogInfo(@"%@-------------视图加载完毕------------",controller);
@@ -81,7 +75,7 @@
         
         UIViewController *controller = [info instance];
         
-        if ([NSStringFromClass([controller class]) hasPrefix:@"HX"] && ([controller isKindOfClass:NSClassFromString(@"HXActivityuDetailVC")]||[controller isKindOfClass:NSClassFromString(@"HXVideoDetailVC")]||[controller isKindOfClass:NSClassFromString(@"HXTalentVideoDetailVC")]||[controller isKindOfClass:NSClassFromString(@"HXTeacherPersonCenterVC")]||[controller isKindOfClass:NSClassFromString(@"HXTeacherHomePageVC")])||[controller isKindOfClass:NSClassFromString(@"HXUserHomePageVC")]) {
+        if ([controller isKindOfClass:NSClassFromString(@"HHPersenCenterVC")]||[controller isKindOfClass:NSClassFromString(@"HHLoginVC")]||[controller isKindOfClass:NSClassFromString(@"HHHomeVC")]||[controller isKindOfClass:NSClassFromString(@"HHFoundVC")]||[controller isKindOfClass:NSClassFromString(@"HHWXLoginVC")]) {
             
             [controller.navigationController setNavigationBarHidden:YES animated:YES];
             

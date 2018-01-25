@@ -36,6 +36,8 @@ PODS:
   - CocoaLumberjack/Default (3.3.0)
   - CocoaLumberjack/Extensions (3.3.0):
     - CocoaLumberjack/Default
+  - DZNEmptyDataSet (1.8.1)
+  - IQKeyboardManager (5.0.6)
   - JCore (1.1.6)
   - JPush (3.0.2):
     - JCore (~> 1.1.1)
@@ -81,6 +83,8 @@ DEPENDENCIES:
   - Aspects
   - BlocksKit
   - CocoaLumberjack
+  - DZNEmptyDataSet
+  - IQKeyboardManager
   - JPush (= 3.0.2)
   - JSONModel (~> 1.1.2)
   - Masonry
@@ -103,6 +107,8 @@ SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   CocoaLumberjack: 3c8c74683302f9012bb168e1c4b7ae3c0b558431
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  IQKeyboardManager: 077b7f691dfa9d69db9cff66f2bed68ebfc02d9b
   JCore: 18fc8725124f26e55625eaf224659b3a999dcf63
   JPush: 01a693fafe51b93eafc2e368bbc7a7cc07e12ce4
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
@@ -118,6 +124,6 @@ SPEC CHECKSUMS:
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYCategories: 3c7e012ac4573b1fc432f9a2eac15109857391d2
 
-PODFILE CHECKSUM: d4650d444cf800c24b81487eda6ca28563e28489
+PODFILE CHECKSUM: 80b778ba37186a6c5376d62a545868257fff8d00
 
 COCOAPODS: 1.3.1

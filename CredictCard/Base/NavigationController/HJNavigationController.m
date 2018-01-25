@@ -83,7 +83,7 @@
 
     //设置文字属性
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-    textAttrs[NSForegroundColorAttributeName] = kWhiteColor;
+    textAttrs[NSForegroundColorAttributeName] = kBlackColor;
     textAttrs[NSFontAttributeName] = JDNavigationFont;
     
     
@@ -113,8 +113,8 @@
         textAttrs[NSShadowAttributeName] = [[NSShadow alloc] init];
 
     }
-    //去掉导航栏下面的灰线
-    [appearance setShadowImage:[UIImage new]];
+//    //去掉导航栏下面的灰线
+//    [appearance setShadowImage:[UIImage new]];
 
     [appearance setTitleTextAttributes:textAttrs];
 }

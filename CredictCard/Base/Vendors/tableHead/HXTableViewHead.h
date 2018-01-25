@@ -26,5 +26,6 @@
 @property(nonatomic,strong)UILabel *discribLab;
 
 @property(nonatomic,assign)CGRect headtitleFrame;
+@property(nonatomic,assign)CGFloat rightBtn_W;
 
 @end

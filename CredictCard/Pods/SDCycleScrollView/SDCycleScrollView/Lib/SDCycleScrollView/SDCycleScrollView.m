@@ -93,10 +93,9 @@ NSString * const ID = @"SDCycleScrollViewCell";
     _pageDotColor = [UIColor lightGrayColor];
     _bannerImageViewContentMode = UIViewContentModeScaleToFill;
     
-    self.backgroundColor = [UIColor lightGrayColor];
+    self.backgroundColor = [UIColor colorWithRed:171/255.0 green:230/255.0 blue:255/255.0 alpha:1];
     
 }
-
 + (instancetype)cycleScrollViewWithFrame:(CGRect)frame imageNamesGroup:(NSArray *)imageNamesGroup
 {
     SDCycleScrollView *cycleScrollView = [[self alloc] initWithFrame:frame];
@@ -319,9 +318,13 @@ NSString * const ID = @"SDCycleScrollViewCell";
     _imageURLStringsGroup = imageURLStringsGroup;
     
     NSMutableArray *temp = [NSMutableArray new];
-    [_imageURLStringsGroup enumerateObjectsUsingBlock:^(NSString * obj, NSUInteger idx, BOOL * stop) {
+    [_imageURLStringsGroup enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL * stop) {
         NSString *urlString;
-        if ([obj isKindOfClass:[NSString class]]) {
+        
+        if ([obj isKindOfClass:[NSDictionary class]]) {
+            
+            urlString = obj[@"Image"];
+        }else if ([obj isKindOfClass:[NSString class]]) {
             urlString = obj;
         } else if ([obj isKindOfClass:[NSURL class]]) {
             NSURL *url = (NSURL *)obj;
